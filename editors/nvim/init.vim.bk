@@ -1,0 +1,225 @@
+syntax on
+set nocompatible
+set list lcs=tab:\ \
+set hidden
+set confirm
+set autowriteall
+set wildmenu wildmode=full
+set number
+set relativenumber
+set numberwidth=5
+set mouse=a
+set listchars=tab:→\ ,trail:·,precedes:«,extends:»,eol:¶
+set formatoptions=rq
+set history=10000
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set autoindent
+set laststatus=2
+set showmatch
+set incsearch
+set hlsearch
+set ruler
+set title
+set hid
+set cursorline
+set scrolloff=3
+set showcmd
+set wildmode=longest,list
+set fileformats=unix,mac,dos
+set pastetoggle=≤F3>
+set encoding=utf-8
+set fillchars=""
+set autoindent
+set copyindent
+set shiftround
+set showmatch
+set shell=/bin/zsh
+set splitright
+set splitbelow
+
+let mapleader=";"
+nnoremap <silent> <leader>ec :e $MYVIMRC<CR>
+inoremap ;; <Esc>
+filetype plugin indent on
+
+scriptencoding utf-8
+:hi CursorLine   cterm=underline
+"ctermbg=NONE ctermfg=white guibg=darkred guifg=white
+:hi CursorColumn cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
+":nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+"hi cursorline cterm=none term=none
+"autocmd WinEnter * setlocal cursorline
+"autocmd WinLeave * setlocal nocursorline
+"highlight CursorLine guibg=#303000 ctermbg=234
+"set cursorcolumn
+"autocmd ColorScheme * highlight VertSplit cterm=NONE ctermfg=Green ctermbg=NONE
+hi LineNr guibg=bg
+set foldcolumn=0
+hi foldcolumn guibg=bg
+hi VertSplit guibg=bg guifg=bg
+highlight VertSplit cterm=NONE
+
+
+
+
+call plug#begin()
+Plug 'roxma/nvim-completion-manager'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'pearofducks/ansible-vim'
+Plug 'chriskempson/base16-vim'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
+Plug 'thaerkh/vim-indentguides'
+Plug 'ingydotnet/yaml-vim'
+Plug 'pearofducks/ansible-vim'
+Plug 'ryanoasis/vim-devicons'
+Plug 'preservim/nerdtree'
+Plug 'majutsushi/tagbar'
+Plug 'airblade/vim-gitgutter'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'andrewstuart/vim-kubernetes'
+Plug 'godlygeek/tabular'
+Plug 'junegunn/vim-easy-align'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'yggdroot/indentline'
+Plug 'glench/vim-jinja2-syntax'
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'vim-scripts/Rename2'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+call plug#end()
+
+nmap <Leader>l <Plug>(Limelight)
+xmap <Leader>l <Plug>(Limelight)
+
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
+
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
+
+" Default: 0.5
+let g:limelight_default_coefficient = 0.7
+
+" Number of preceding/following paragraphs to include (default: 0)
+let g:limelight_paragraph_span = 1
+
+" Beginning/end of paragraph
+"   When there's no empty line between the paragraphs
+"   and each paragraph starts with indentation
+let g:limelight_bop = '^\s'
+let g:limelight_eop = '\ze\n^\s'
+
+" Highlighting priority (default: 10)
+"   Set it to -1 not to overrule hlsearch
+let g:limelight_priority = -1
+
+
+set encoding=UTF-8
+let base16colorspace=256 
+
+let g:airline_theme='bubblegum'
+set fillchars=""
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+:set listchars=tab:\|\ 
+:set list
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+
+set fillchars=vert:\ 
+hi! VertSplit guifg=black guibg=black ctermfg=black ctermbg=black
+
+
+nnoremap <silent> <Space> :NERDTreeToggle<CR>
+nnoremap <silent> <leader>tb :TagbarToggle<CR>
+nnoremap <silent> <leader>n :set number! number?<CR>
+nnoremap <silent> <leader>w :set wrap! wrap?<CR>
+nnoremap <silent> <leader>bb <C-^>
+nnoremap <silent> <leader>bn :bn<CR>
+nnoremap <C-l> :bn<CR>
+nnoremap <silent> <leader>bp :bp<CR>
+nnoremap <C-h> :bp<CR>
+nnoremap <silent> <leader>bd :bd<CR>
+nnoremap <silent> <leader>bk :bd!<CR>
+nnoremap <silent> <leader>bl :ls<CR>
+" list and select buffer
+nnoremap <silent> <leader>bg :ls<CR>:buffer<Space>
+
+" horizontal split with new buffer
+nnoremap <silent> <leader>bh :new<CR>
+
+" vertical split with new buffer
+nnoremap <silent> <leader>bv :vnew<CR>
+
+" redraw screan and clear search highlighted items
+"http://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting#answer-25569434
+nnoremap <silent> <C-L> :nohlsearch<CR><C-L>
+
+" improved keyboard navigation
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+
+" Auto start NERD tree when opening a directory
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | wincmd p | endif
+
+" Auto start NERD tree if no files are specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | exe 'NERDTree' | endif
+
+" Let quit work as expected if after entering :q the only window left open is NERD Tree itself
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+
+
+function! s:goyo_enter()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status off
+    silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+  endif
+  set noshowmode
+  set noshowcmd
+  set scrolloff=999
+  Limelight
+  " ...
+endfunction
+
+function! s:goyo_leave()
+  if executable('tmux') && strlen($TMUX)
+    silent !tmux set status on
+    silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+  endif
+  set showmode
+  set showcmd
+  set scrolloff=5
+  Limelight!
+  " ...
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
+
+
