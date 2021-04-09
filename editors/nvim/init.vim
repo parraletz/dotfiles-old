@@ -29,6 +29,7 @@ call vundle#begin()		" required, all plugins must appear after this line.
     Plugin 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
     Plugin 'vim-python/python-syntax'                    " Python highlighting
     Plugin 'ap/vim-css-color'                            " Color previews for CSS
+    Plugin 'gko/vim-coloresque'
 "{{ Junegunn Choi Plugins }}
     Plugin 'junegunn/goyo.vim'                           " Distraction-free viewing
     Plugin 'junegunn/limelight.vim'                      " Hyperfocus on a range
@@ -38,13 +39,12 @@ call vundle#begin()		" required, all plugins must appear after this line.
     Plugin 'junegunn/tabularize'                         " Tabs management plugin
     Plugin 'hashivim/vim-packer'
     Plugin 'prettier/vim-prettier'                       " Vim prettier
-"    Plugin 'morhetz/gruvbox'
-"    Plugin 'shinchu/lightline-gruvbox.vim'
+    Plugin 'morhetz/gruvbox'
+    Plugin 'shinchu/lightline-gruvbox.vim'
     Plugin 'nlknguyen/cloudformation-syntax.vim'
     Plugin 'vim-ctrlspace/vim-ctrlspace'
     Plugin 'stephpy/vim-yaml'
     Plugin 'Yggdroot/indentLine'
-    Plugin 'gruvbox-community/gruvbox'
 "    Plugin 'sainnhe/gruvbox-material'
     Plugin 'neoclide/coc.nvim', {'branch': 'release'}
     Plugin 'tweekmonster/gofmt.vim'
@@ -147,7 +147,7 @@ nmap <leader>gs :G<CR>
 
 let g:lightline = {}
 let g:lightline = {
-      \ 'colorscheme': 'seoul256',
+      \ 'colorscheme': 'gruvbox',
        \ 'active': {
        \   'left': [ ['mode', 'paste'],
        \             ['fugitive', 'readonly', 'filename', 'absolutepath','modified'] ],

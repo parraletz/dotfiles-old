@@ -1,6 +1,6 @@
 # Uncomment for debuf with `zprof`
 # zmodload zsh/zprof
-
+eval "$(direnv hook zsh)"
 # ZSH Ops
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_FCNTL_LOCK
@@ -23,7 +23,8 @@ prompt ${DOTLY_THEME:-codely}
 
 source "$DOTLY_PATH/shell/zsh/bindings/reverse_search.zsh"
 source "$DOTFILES_PATH/shell/zsh/key-bindings.zsh"
-export PATH="/home/aparra/.pyenv/bin:$PATH"
+export PATH="/home/aparra/.pyenv/bin:/home/aparra/.local/bin:$PATH"
+
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 function zle-keymap-select zle-line-init zle-line-finish
@@ -39,7 +40,7 @@ zle -N zle-line-finish
 zle -N zle-keymap-select
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completionexport GOENV_ROOT="$HOME/.goenv"
