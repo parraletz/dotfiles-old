@@ -7,3 +7,5 @@
 
 - link:
     ~/.dotly: os/linux/.dotly
+    ~/.config/nvim: editors/nvim
+    ~/.tmux.conf: shell/tmux/.tmux.conf

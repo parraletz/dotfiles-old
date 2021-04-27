@@ -8,7 +8,7 @@ alias ll="ls -l"
 alias la="ls -la"
 alias ~="cd ~"
 alias dotfiles="cd '$DOTFILES_PATH'"
-
+alias k="kubectl"
 # Git
 alias gaa="git add -A"
 alias gc="$DOTLY_PATH/bin/dot git commit"
