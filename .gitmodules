@@ -2,3 +2,19 @@
 	path = modules/dotly
 	url = https://github.com/CodelyTV/dotly.git
 	branch = master
+[submodule "shell/tmux/plugins/tmux-gruvbox"]
+	path = shell/tmux/plugins/tmux-gruvbox
+	url = https://github.com/egel/tmux-gruvbox.git
+	branch = master
+[submodule "shell/tmux/plugins/tmux-sensible"]
+	path = shell/tmux/plugins/tmux-sensible
+	url = https://github.com/tmux-plugins/tmux-sensible.git
+	branch = master
+[submodule "shell/tmux/plugins/tmux-tasks"]
+	path = shell/tmux/plugins/tmux-tasks
+	url = https://github.com/chriszarate/tmux-tasks.git
+	branch = master
+[submodule "shell/tmux/plugins/tpm"]
+	path = shell/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
+	branch = master
