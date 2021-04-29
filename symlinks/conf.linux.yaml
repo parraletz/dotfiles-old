@@ -9,3 +9,6 @@
     ~/.dotly: os/linux/.dotly
     ~/.config/nvim: editors/nvim
     ~/.tmux.conf: shell/tmux/.tmux.conf
+    ~/.tmux/plugins/tpm: shell/tmux/plugins/tpm
+    ~/.config/kitty: os/linux/kitty
+    ~/.config/fontconfig/fonts.conf: os/linux/fontconfig/fonts.conf
