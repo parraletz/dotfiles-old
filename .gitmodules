@@ -17,4 +17,8 @@
 [submodule "shell/tmux/plugins/tpm"]
 	path = shell/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+    branch = master
+[submodule "os/linux/rofig/themes/gruvbox"]
+	path = os/linux/rofi/themes/gruvbox
+	url =  https://github.com/bardisty/gruvbox-rofi.git
 	branch = master
