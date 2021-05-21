@@ -30,4 +30,8 @@
 	url = https://github.com/jeffkreeftmeijer/vim-dim.git
 [submodule "editors/nvim/bundle/Vundle.vim"]
 	path = editors/nvim/bundle/Vundle.vim
-	url = https://github.com/VundleVim/Vundle.vim.git
+    url = https://github.com/VundleVim/Vundle.vim.git
+    branch = master
+[submodule "editors/vim/pack/vendor/start/indentLine"]
+    path = editors/vim/pack/vendor/start/indentLine
+    url = https://github.com/Yggdroot/indentLine.git

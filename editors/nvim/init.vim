@@ -342,8 +342,9 @@ let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 
 " add yaml stuffs
 "au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+let g:indentLine_enabled = 1
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
-
+let g:indentLine_char = '⦙'
 
 if executable('rg')
     let g:rg_derive_root='true'
@@ -367,3 +368,8 @@ let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
 let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
 set completefunc=emoji#complete
+
+set list
+set listchars=tab:>-
+
+
