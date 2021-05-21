@@ -18,3 +18,16 @@
 	path = shell/tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
 	branch = master
+[submodule "editors/nvim/pack/ariblade/start/vim-gitgutter"]
+    path = editors/nvim/pack/ariblade/start/vim-gitgutter
+    url = https://github.com/airblade/vim-gitgutter.git
+    branch = master
+[submodule "editors/nvim/pack/start/vim-gitgutter"]
+	path = editors/nvim/pack/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "editors/vim/pack/plugins/start/vim-dim"]
+	path = editors/vim/pack/plugins/start/vim-dim
+	url = https://github.com/jeffkreeftmeijer/vim-dim.git
+[submodule "editors/nvim/bundle/Vundle.vim"]
+	path = editors/nvim/bundle/Vundle.vim
+	url = https://github.com/VundleVim/Vundle.vim.git

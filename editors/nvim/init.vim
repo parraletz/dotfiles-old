@@ -6,7 +6,7 @@ filetype off                  " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=~/.config/nvim/bundle/Vundle.vim
 
 call vundle#begin()		" required, all plugins must appear after this line.
 "{{ The Basics }}
@@ -361,4 +361,9 @@ nmap <leader>gh :diffget //3<CR>
 nmap <leader>gu :diffget //2<CR>
 nmap <leader>gs :G<CR>
 
+let g:gitgutter_sign_added = emoji#for('small_blue_diamond')
+let g:gitgutter_sign_modified = emoji#for('small_orange_diamond')
+let g:gitgutter_sign_removed = emoji#for('small_red_triangle')
+let g:gitgutter_sign_modified_removed = emoji#for('collision')
 
+set completefunc=emoji#complete
