@@ -14,3 +14,7 @@
     ~/.config/fontconfig/fonts.conf: os/linux/fontconfig/fonts.conf
     ~/.vimrc: editors/vimrc
     ~/.vim: editors/vim
+    ~/.config/rofi/themes/gruvbox: os/linux/rofi/themes/gruvbox
+    ~/.config/rofi/config: os/linux/rofi/config
+    ~/.config/dunst/dunstrc: os/linux/dunst/dunstrc
+    ~/.config/ranger: os/linux/ranger
